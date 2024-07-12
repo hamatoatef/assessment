@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "aeb6b1d0-0465-41ce-9446-ebbcf891d674",
+		"name": "assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26304821"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/v1/users/verify-email/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTEzZWM3ZDMyOTcyZWZjYWRmMWVjMiIsImlhdCI6MTcyMDc5NDgyM30.35EtjaOkAujUP-yRBNVhvr9H3Nj_AvxtINYCJlXkPHc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/v1/users/verify-email/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTEzZWM3ZDMyOTcyZWZjYWRmMWVjMiIsImlhdCI6MTcyMDc5NDgyM30.35EtjaOkAujUP-yRBNVhvr9H3Nj_AvxtINYCJlXkPHc"
+			},
+			"response": []
+		},
+		{
+			"name": "get request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "IdDocument",
+							"type": "file",
+							"src": "postman-cloud:///1eedd677-60a7-41b0-95a9-17e9ff428129"
+						},
+						{
+							"key": "fullName",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "3qo11rot@evrymails.shop",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+201234567890",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:8000/api/v1/users/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/v1/users/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"ahmed.a.noureldeen@gmail.com\",\r\n  \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/api/v1/users/login"
+			},
+			"response": []
+		}
+	]
+}
