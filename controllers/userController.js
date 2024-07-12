@@ -50,7 +50,11 @@ exports.signup = async (req, res) => {
 
     await sendEmail(emailOptions);
 
-    res.status(201).send(newUser);
+    res.status(201).send({
+      fullName: newUser.fullName,
+      email: newUser.email,
+      phone: newUser.phone,
+    });
   } catch (err) {
     res.status(400).send({ error: err.message });
   }
